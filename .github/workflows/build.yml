@@ -23,6 +23,11 @@ jobs:
         with:
           dotnet-version: ${{ matrix.dotnet-version }}
 
+      - name: prepare macos
+        if: ${{ matrix.os == 'macos-latest' }}
+        run: |
+          brew install mono-libgdiplus
+
       - name: restore packages
         run: dotnet restore
 
