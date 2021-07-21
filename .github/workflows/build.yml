@@ -37,7 +37,7 @@ jobs:
       - name: test
         run: dotnet run --no-build
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@27121b0bdffd731efa15d66772be8dc71245d074 # renovate: tag=v2
         with:
           name: qrcode-${{ matrix.os }}
           path: qrcode.png
